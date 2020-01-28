@@ -1,6 +1,6 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from cmsplugin_feedback.views import FeedbackView
 
-urlpatterns = patterns('',  # NOQA
+urlpatterns = [
     url(r'^form/(?P<plugin>\d+)/?$', FeedbackView.as_view(), name='feedback-form'),
-)
+]

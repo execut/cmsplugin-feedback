@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='FeedbackPlugin',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, to='cms.CMSPlugin', serialize=False, parent_link=True, auto_created=True)),
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, to='cms.CMSPlugin', serialize=False, parent_link=True, auto_created=True, on_delete=False)),
             ],
             options={
                 'abstract': False,

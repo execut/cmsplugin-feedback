@@ -2,7 +2,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.conf import settings
 from django.utils.translation import ugettext as _
-from django.utils.importlib import import_module
+from importlib import import_module
 
 from .forms import FeedbackMessageForm
 from .models import FeedbackPlugin as Plugin

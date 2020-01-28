@@ -1,7 +1,7 @@
 import django.dispatch
-from django.contrib.sites.models import get_current_site
+from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import mail_managers
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.template import loader, Context
 from . import settings
 
