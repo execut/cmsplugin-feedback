@@ -32,7 +32,7 @@ class FeedbackView(View):
         if not form.is_valid():
             new_captcha = CaptchaStore.generate_key()
             return JsonResponse({
-                'message': unicode(VALIDATION_ERROR),
+                'message': str(VALIDATION_ERROR),
                 'errors': form.errors,
                 'captcha': {
                     'key': new_captcha,
@@ -42,6 +42,6 @@ class FeedbackView(View):
         form.save()
         form_submited.send(self, message=form.instance, request=request)
         return JsonResponse({
-            'message': unicode(OK),
+            'message': str(OK),
             'id': form.instance.id,
         })
